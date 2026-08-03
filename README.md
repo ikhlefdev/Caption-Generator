@@ -18,6 +18,7 @@ A Django web app that generates social media captions two ways: instant rule-bas
 
 ## Screenshots
 
+![Caption Generator screenshot](Screenshot_1.jpeg)
 
 ## Running Locally
 
