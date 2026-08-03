@@ -17,8 +17,9 @@ from dotenv import load_dotenv
 import os
 from google import genai
 
-os.environ["HTTP_PROXY"] = "http://192.168.49.1:8282"   
-os.environ["HTTPS_PROXY"] = "http://192.168.49.1:8282"
+if os.getenv("USE_PROXY") == "true":
+    os.environ["HTTP_PROXY"] = "http://192.168.49.1:8282"
+    os.environ["HTTPS_PROXY"] = "http://192.168.49.1:8282"
 def generate_ai_caption(product, platform, tone, feature, cta_type):
 # Load environment variables from .env file
    load_dotenv()
