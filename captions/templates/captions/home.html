@@ -57,13 +57,25 @@
     </form>
 
 
-    {% if generated_caption %}
-        <div class="mt-4">
-        <h2>Your Caption:</h2>
-        <p class="mb-0">{{ generated_caption }}</p>
-        </div>
-    {% endif %}
+    
+        
 
-    </div>
+        <div style="border: rgb(196, 83, 83); margin-bottom: 20px; padding: 15px; border-radius: 5px; background-color: #ead8b9e2;"
+        class="mt-4">
+        <h2>Your AI GeneratedCaption:</h2>
+        {% if generated_caption %}
+        <p class="mb-1">{{ generated_ai_caption }}</p>
+        <button class="btn btn-light" onclick="copyToClipboard()" style="border:rgb(196, 83, 83) ;">Copy to Clipboard</button>
+        {% endif %}
+        <script>
+            function copyToClipboard() {
+                const captionText = document.querySelector('.mb-1').innerText;
+                navigator.clipboard.writeText(captionText);
+            }
+        </script>
+        </div>
+
+    
+   </div>
 </body>
 </html> 
