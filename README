@@ -17,9 +17,7 @@ A Django web app that generates social media captions two ways: instant rule-bas
 - **Database:** SQLite
 
 ## Screenshots
-<p align="center">
-  <img src="./Screenshot_1.jpeg" alt="App Screenshot" width="600"/>
-</p>
+![Caption Generator screenshot](Screenshot_1.jpeg)
 
 ## Running Locally
 
